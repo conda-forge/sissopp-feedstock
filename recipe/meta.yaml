@@ -21,6 +21,8 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
+    - llvm-openmp  # [osx]
+    - libgomp      # [linux]
   host:
     - python
     - pip
@@ -42,7 +44,8 @@ requirements:
     - zlib
   run:
     - python
-    - _openmp_mutex
+    - llvm-openmp  # [osx]
+    - _openmp_mutex=*=*_llvm  # [linux]
     - numpy
     - scipy
     - pandas
