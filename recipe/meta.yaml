@@ -44,8 +44,8 @@ requirements:
     - zlib
   run:
     - python
-    - llvm-openmp  # [osx]
-    - _openmp_mutex=*=*_llvm  # [linux]
+    - llvm-openmp    # [osx]
+    - _openmp_mutex  # [linux]
     - numpy
     - scipy
     - pandas
