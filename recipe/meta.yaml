@@ -1,5 +1,5 @@
 {% set name = "sissopp" %}
-{% set version = "1.2.2" %}
+{% set version = "1.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
 build:
   skip: True  # [win]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 4
+  number: 0
 
 requirements:
   build:
@@ -33,7 +33,8 @@ requirements:
     - seaborn
     - scikit-learn
     - toml
-    - mkl
+    - openblas # [osx]
+    - mkl      # [linux]
     - libboost-devel ==1.85
     - libboost-mpi
     - coin-or-utils
@@ -52,7 +53,8 @@ requirements:
     - scikit-learn
     - matplotlib-base
     - mpich
-    - mkl
+    - openblas       # [osx]
+    - mkl            # [linux]
     - libboost-mpi
     - coin-or-utils
     - coin-or-clp
