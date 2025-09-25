@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/{{ name }}_developers/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 5eb869a1b4633fb32d662d983fd713f315cb973bd8f7053194753cc7bb4b6572
+  sha256: 35694aa06f866f2d9a1eb27aaafc793dd234de6592cfbe0382b2c6d8b96be750
 
 build:
   skip: True  # [win]
