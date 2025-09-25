@@ -12,6 +12,8 @@ source:
 build:
   skip: True  # [win]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script_env:
+   - BLAS_LIBRARIES=${CONDA_PREFIX}/lib
   number: 0
 
 requirements:
@@ -35,6 +37,7 @@ requirements:
     - toml
     - openblas # [osx]
     - mkl      # [linux]
+    - kokkos
     - libboost-devel ==1.85
     - libboost-mpi
     - coin-or-utils
