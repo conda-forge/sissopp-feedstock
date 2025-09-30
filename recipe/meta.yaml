@@ -1,5 +1,5 @@
 {% set name = "sissopp" %}
-{% set version = "1.2.2" %}
+{% set version = "1.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://gitlab.com/{{ name }}_developers/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 5eb869a1b4633fb32d662d983fd713f315cb973bd8f7053194753cc7bb4b6572
+  sha256: 2b1ef8b2fbe7e2f72c798bb1c45754b16118e8bf58c05fa796b17a877f2d4e6e
 
 build:
-  skip: True  # [win or osx]
+  skip: true  # [win or osx]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 3
+  number: 0
 
 requirements:
   build:
