@@ -48,7 +48,7 @@ requirements:
     - zlib
   run:
     - python
-    - llvm-openmp    # [osx]
+    - llvm-openmp  # [osx]
     - _openmp_mutex  # [linux]
     - numpy
     - scipy
@@ -56,8 +56,8 @@ requirements:
     - scikit-learn
     - matplotlib-base
     - mpich
-    - openblas       # [osx]
-    - mkl            # [linux]
+    - libopenblas  # [osx]
+    - mkl  # [linux]
     - libboost-mpi
     - coin-or-utils
     - coin-or-clp
