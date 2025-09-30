@@ -1,5 +1,5 @@
 {% set name = "sissopp" %}
-{% set version = "1.2.3" %}
+{% set version = "1.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/{{ name }}_developers/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 35694aa06f866f2d9a1eb27aaafc793dd234de6592cfbe0382b2c6d8b96be750
+  sha256: 2b1ef8b2fbe7e2f72c798bb1c45754b16118e8bf58c05fa796b17a877f2d4e6e
 
 build:
   skip: True  # [win]
