@@ -12,7 +12,7 @@ source:
 build:
   skip: True  # [win or osx]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 3
+  number: 4
 
 requirements:
   build:
