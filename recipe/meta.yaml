@@ -24,7 +24,7 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
     - llvm-openmp  # [osx]
-    - libgomp      # [linux]
+    - libgomp  # [linux]
   host:
     - python
     - pip
@@ -35,8 +35,8 @@ requirements:
     - seaborn
     - scikit-learn
     - toml
-    - openblas # [osx]
-    - mkl      # [linux]
+    - openblas  # [osx]
+    - mkl  # [linux]
     - kokkos
     - libboost-devel ==1.85
     - libboost-mpi
