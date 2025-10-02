@@ -63,8 +63,6 @@ requirements:
     - coin-or-clp
     - nlopt
     - fmt
-    - pybind11
-    - zlib
 
 test:
   imports:
@@ -76,7 +74,7 @@ test:
     - tests/pytest
   commands:
     - pip check
-    - pytest tests/pytest/
+    - pytest tests/pytest/  # [linux]
 
 about:
   home: https://gitlab.com/sissopp_developers/sissopp
