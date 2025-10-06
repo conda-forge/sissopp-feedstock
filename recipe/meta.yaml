@@ -14,7 +14,7 @@ build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   script_env:
    - BLAS_LIBRARIES=${CONDA_PREFIX}/lib
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -25,6 +25,10 @@ requirements:
     - {{ stdlib('c') }}
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
+    - python  # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
+    - numpy  # [build_platform != target_platform]
+    - pybind11  # [build_platform != target_platform]
   host:
     - python
     - pip
