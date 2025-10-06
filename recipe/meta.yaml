@@ -9,6 +9,10 @@ source:
   url: https://gitlab.com/{{ name }}_developers/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
   sha256: 7e8476aac43132ae98266a684814d863726d9651d659f1ed37d29980e4c938af
 
+build_platform:
+  osx_arm64: osx_64
+test: native_and_emulated
+
 build:
   skip: True  # [win]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -25,6 +29,10 @@ requirements:
     - {{ stdlib('c') }}
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
+    - python  # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
+    - numpy  # [build_platform != target_platform]
+    - pybind11  # [build_platform != target_platform]
   host:
     - python
     - pip
