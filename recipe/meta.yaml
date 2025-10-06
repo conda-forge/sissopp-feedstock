@@ -18,7 +18,7 @@ build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   script_env:
    - BLAS_LIBRARIES=${CONDA_PREFIX}/lib
-  number: 1
+  number: 2
 
 requirements:
   build:
