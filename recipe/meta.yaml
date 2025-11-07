@@ -1,5 +1,5 @@
 {% set name = "sissopp" %}
-{% set version = "1.2.5" %}
+{% set version = "1.2.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://gitlab.com/{{ name }}_developers/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 7e8476aac43132ae98266a684814d863726d9651d659f1ed37d29980e4c938af
+  sha256: 68924e937bf7732cf2908c32171fc6e7bdc5aab28f65de1e1845b9c6b24e15fb
 
 build:
-  skip: True  # [win]
+  skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   script_env:
-   - BLAS_LIBRARIES=${CONDA_PREFIX}/lib
-  number: 3
+    - BLAS_LIBRARIES=${CONDA_PREFIX}/lib
+  number: 0
 
 requirements:
   build:
