@@ -23,7 +23,7 @@ docker_image:
 fmt:
 - '12.0'
 mkl:
-- '2024'
+- '2025'
 nlopt:
 - '2.10'
 numpy:
