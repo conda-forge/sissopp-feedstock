@@ -29,7 +29,7 @@ llvm_openmp:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 nlopt:
-- '2.10'
+- '2.11'
 numpy:
 - '2'
 openblas:
